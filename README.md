@@ -59,13 +59,14 @@ git clone https://github.com/wt20230521/CF-IP-Optimizer.git
 cd CF-IP-Optimizer
 go run main.go better.go scan.go
 然后浏览器访问：http://localhost:8080
-方式二：编译成独立 EXE（无需 Go 环境）
-方式二：编译成独立 EXE（无需 Go 环境）
-bash
+###方式二：编译成独立 EXE（无需 Go 环境）
+
+```bash
 go build -o CF优选IP.exe main.go better.go scan.go
 双击 CF优选IP.exe 即可运行
 
-方式三：下载预编译版本
+###方式三：下载预编译版本
+
 前往 Releases 页面下载
 
 📖 使用说明
