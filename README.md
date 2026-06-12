@@ -62,7 +62,6 @@ go run main.go better.go scan.go
 然后浏览器访问：http://localhost:8080
 
 🔹 方式二：编译成独立 EXE（无需 Go 环境）
-bash
 go build -o CF优选IP.exe main.go better.go scan.go
 双击 CF优选IP.exe 即可运行
 
@@ -74,10 +73,10 @@ go build -o CF优选IP.exe main.go better.go scan.go
 首次使用请点击「📥 更新数据」按钮获取最新 IP 列表
 
 🔹 第二步：配置参数
-参数	选项	说明
-IP 协议	IPv4 / IPv6	选择要测试的 IP 类型
-连接验证	TLS / HTTP	加密连接方式
-期望带宽	10-1000 Mbps	达到此带宽即停止扫描
+参数	         选项	           说明
+IP 协议	   IPv4 / IPv6	  选择要测试的 IP 类型
+连接验证	   TLS / HTTP	    加密连接方式
+期望带宽	   10-1000 Mbps	  达到此带宽即停止扫描
 🔹 第三步：开始扫描
 点击「🚀 开始扫描」按钮，等待 8-15 秒
 
@@ -89,13 +88,13 @@ IP 协议	IPv4 / IPv6	选择要测试的 IP 类型
 可随时点击「⏹️ 停止」中断扫描
 
 📊 结果解读
-指标	单位	说明
-实测带宽	Mbps	实际测得的网络带宽
-目标带宽	Mbps	你设置的期望带宽
-峰值速度	kB/s	测速期间最高瞬时速度
-延迟	ms	TCP 连接延迟
-数据中心	-	IP 所在物理位置
-用时	秒	完成扫描所需时间
+指标	     单位	    说明
+实测带宽	   Mbps	  实际测得的网络带宽
+目标带宽	   Mbps	  你设置的期望带宽
+峰值速度	   kB/s	  测速期间最高瞬时速度
+延迟	     ms	    TCP 连接延迟
+数据中心	   -	    IP 所在物理位置
+用时	     秒	    完成扫描所需时间
 📁 项目结构
 text
 CF-IP-Optimizer/
