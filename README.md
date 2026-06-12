@@ -116,7 +116,7 @@ CF-IP-Optimizer/
 请先点击「📥 更新数据」获取最新 IP 列表，然后重试。
 
 </details><details> <summary><b>Q: 扫描时间太长？</b></summary>
-可适当降低期望带宽值（如 30 Mbps），或增加并发数。
+可适当降低期望带宽值（如 30 Mbps）。
 
 </details><details> <summary><b>Q: 支持 IPv6 吗？</b></summary>
 支持，在配置中选择 IPv6 即可。
@@ -124,7 +124,7 @@ CF-IP-Optimizer/
 </details><details> <summary><b>Q: 如何让局域网内其他人访问？</b></summary>
 修改 main.go 中端口为 0.0.0.0:8080，重启程序即可。
 
-</details><details> <summary><b>Q: 提示端口被占用？</b></summary>
+</details><details> <summary><b>Q: 端口被占用？</b></summary>
 关闭其他占用 8080 端口的程序，或修改 main.go 中的端口号。
 
 </details>
