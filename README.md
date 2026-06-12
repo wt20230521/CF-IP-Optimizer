@@ -35,8 +35,8 @@
 
 | 扫描配置 | | | 更新数据 |
 |---------|---|---|---------|
-| IP协议 | IPv4 / IPv6 | 连接验证 | TLS / HTTP |
-| 期望带宽 | 50 Mbps (可调) | | |
+| IP 协议 | IPv4 / IPv6 | 连接验证 | TLS / HTTP |
+| 期望带宽 | 50 Mbps（可调） | | |
 
 ### 按钮区域
 
@@ -45,7 +45,7 @@
 
 ### 扫描结果示例
 
-| IP地址 | 实测带宽 | 目标带宽 | 峰值速度 | 延迟 |
+| IP 地址 | 实测带宽 | 目标带宽 | 峰值速度 | 延迟 |
 |--------|---------|---------|---------|------|
 | 104.17.216.169 | 99 Mbps | 50 Mbps | 12750 kB/s | 55 ms |
 
@@ -53,50 +53,76 @@
 
 ## 🚀 快速开始
 
-### 🔹 方式一：直接运行（需要 Go 环境）
+### <kbd>方式一</kbd>：直接运行（需要 Go 环境）
 
 ```bash
 git clone https://github.com/wt20230521/CF-IP-Optimizer.git
 cd CF-IP-Optimizer
 go run main.go better.go scan.go
-然后浏览器访问：http://localhost:8080
+```
 
-🔹 方式二：编译成独立 EXE（无需 Go 环境）
+浏览器访问：`http://localhost:8080`
+
+---
+
+### <kbd>方式二</kbd>：编译成独立 EXE（无需 Go 环境）
+
+```bash
 go build -o CF优选IP.exe main.go better.go scan.go
-双击 CF优选IP.exe 即可运行
+```
 
-🔹 方式三：下载预编译版本
-前往 Releases 页面下载
+双击 `CF优选IP.exe` 即可运行
 
-📖 使用说明
-🔹 第一步：更新数据
+---
+
+### <kbd>方式三</kbd>：下载预编译版本
+
+前往 [Releases](https://github.com/wt20230521/CF-IP-Optimizer/releases) 页面下载对应系统的可执行文件
+
+---
+
+## 📖 使用说明
+
+**第一步：更新数据**
+
 首次使用请点击「📥 更新数据」按钮获取最新 IP 列表
 
-🔹 第二步：配置参数
-参数	         选项	           说明
-IP 协议	   IPv4 / IPv6	  选择要测试的 IP 类型
-连接验证	   TLS / HTTP	    加密连接方式
-期望带宽	   10-1000 Mbps	  达到此带宽即停止扫描
-🔹 第三步：开始扫描
-点击「🚀 开始扫描」按钮，等待 8-15 秒
+**第二步：配置参数**
 
-🔹 第四步：查看结果
-点击 IP 地址自动复制到剪贴板
+| 参数 | 选项 | 说明 |
+|------|------|------|
+| IP 协议 | IPv4 / IPv6 | 选择要测试的 IP 类型 |
+| 连接验证 | TLS / HTTP | 加密连接方式 |
+| 期望带宽 | 10–1000 Mbps | 达到此带宽即停止扫描 |
 
-历史记录自动保存最近 10 条
+**第三步：开始扫描**
 
-可随时点击「⏹️ 停止」中断扫描
+点击「🚀 开始扫描」按钮，等待 8–15 秒
 
-📊 结果解读
-指标	     单位	    说明
-实测带宽	   Mbps	  实际测得的网络带宽
-目标带宽	   Mbps	  你设置的期望带宽
-峰值速度	   kB/s	  测速期间最高瞬时速度
-延迟	     ms	    TCP 连接延迟
-数据中心	   -	    IP 所在物理位置
-用时	     秒	    完成扫描所需时间
-📁 项目结构
-text
+**第四步：查看结果**
+
+- 点击 IP 地址自动复制到剪贴板
+- 历史记录自动保存最近 10 条
+- 可随时点击「⏹️ 停止」中断扫描
+
+---
+
+## 📊 结果解读
+
+| 指标 | 单位 | 说明 |
+|------|------|------|
+| 实测带宽 | Mbps | 实际测得的网络带宽 |
+| 目标带宽 | Mbps | 你设置的期望带宽 |
+| 峰值速度 | kB/s | 测速期间最高瞬时速度 |
+| 延迟 | ms | TCP 连接延迟 |
+| 数据中心 | - | IP 所在物理位置 |
+| 用时 | 秒 | 完成扫描所需时间 |
+
+---
+
+## 📁 项目结构
+
+```
 CF-IP-Optimizer/
 ├── main.go          # Web 服务主程序
 ├── better.go        # 核心 API 接口
@@ -104,40 +130,76 @@ CF-IP-Optimizer/
 ├── README.md        # 项目文档
 ├── LICENSE          # MIT 许可证
 └── screenshot.png   # 界面截图（可选）
-🛠️ 技术栈
-组件	技术
-后端	Go 1.25+
-前端	原生 HTML/CSS/JS
-测速核心	原始 APP 算法
-并发模型	Goroutine + Channel
-❓ 常见问题
-<details> <summary><b>Q: 测速结果全部为 0？</b></summary>
+```
+
+---
+
+## 🛠️ 技术栈
+
+| 组件 | 技术 |
+|------|------|
+| 后端 | Go 1.25+ |
+| 前端 | 原生 HTML/CSS/JS |
+| 测速核心 | 原始 APP 算法 |
+| 并发模型 | Goroutine + Channel |
+
+---
+
+## ❓ 常见问题
+
+<details>
+<summary><b>Q: 测速结果全部为 0？</b></summary>
+
 请先点击「📥 更新数据」获取最新 IP 列表，然后重试。
 
-</details><details> <summary><b>Q: 扫描时间太长？</b></summary>
+</details>
+
+<details>
+<summary><b>Q: 扫描时间太长？</b></summary>
+
 可适当降低期望带宽值（如 30 Mbps）。
 
-</details><details> <summary><b>Q: 支持 IPv6 吗？</b></summary>
+</details>
+
+<details>
+<summary><b>Q: 支持 IPv6 吗？</b></summary>
+
 支持，在配置中选择 IPv6 即可。
 
-</details><details> <summary><b>Q: 如何让局域网内其他人访问？</b></summary>
-修改 main.go 中端口为 0.0.0.0:8080，重启程序即可。
+</details>
 
-</details><details> <summary><b>Q: 端口被占用？</b></summary>
-关闭其他占用 8080 端口的程序，或修改 main.go 中的端口号。
+<details>
+<summary><b>Q: 如何让局域网内其他人访问？</b></summary>
+
+修改 `main.go` 中端口为 `0.0.0.0:8080`，重启程序即可。
 
 </details>
-📄 许可证
+
+<details>
+<summary><b>Q: 端口被占用？</b></summary>
+
+关闭其他占用 8080 端口的程序，或修改 `main.go` 中的端口号。
+
+</details>
+
+---
+
+## 📄 许可证
+
 MIT License © 2026
 
-🙏 致谢
-原始 APP 源码作者
+---
 
-Cloudflare 全球网络
+## 🙏 致谢
 
-🔗 相关链接
-GitHub 仓库：https://github.com/wt20230521/CF-IP-Optimizer
+- 原始 APP 源码作者
+- Cloudflare 全球网络
 
-问题反馈：https://github.com/wt20230521/CF-IP-Optimizer/issues
+---
 
-<p align="center"> ⚡ 如果觉得好用，请给个 Star ⭐ </p> ```
+## 🔗 相关链接
+
+- **GitHub 仓库**：[https://github.com/wt20230521/CF-IP-Optimizer](https://github.com/wt20230521/CF-IP-Optimizer)
+- **问题反馈**：[https://github.com/wt20230521/CF-IP-Optimizer/issues](https://github.com/wt20230521/CF-IP-Optimizer/issues)
+
+<p align="center"> ⚡ 如果觉得好用，请给个 Star ⭐ </p>
