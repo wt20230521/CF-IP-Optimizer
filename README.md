@@ -4,7 +4,7 @@
 
 [![Go Version](https://img.shields.io/badge/Go-1.25+-00ADD8?style=flat&logo=go)](https://golang.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)]()
+[![Platform](https://img.shields.io/badge/Platform-Windows%7CmacOS%7CLinux-lightgrey)]()
 
 ---
 
@@ -30,6 +30,7 @@
 ---
 
 ## 🖥️ 界面预览
+
 ### 扫描配置区域
 
 | 扫描配置 | | | 更新数据 |
@@ -52,38 +53,35 @@
 
 ## 🚀 快速开始
 
-### 方式一：直接运行（需要 Go 环境）
+### 🔹 方式一：直接运行（需要 Go 环境）
 
 ```bash
 git clone https://github.com/wt20230521/CF-IP-Optimizer.git
 cd CF-IP-Optimizer
 go run main.go better.go scan.go
 然后浏览器访问：http://localhost:8080
-###方式二：编译成独立 EXE（无需 Go 环境）
 
-```bash
+🔹 方式二：编译成独立 EXE（无需 Go 环境）
+bash
 go build -o CF优选IP.exe main.go better.go scan.go
 双击 CF优选IP.exe 即可运行
 
-###方式三：下载预编译版本
-
+🔹 方式三：下载预编译版本
 前往 Releases 页面下载
 
 📖 使用说明
-第一步：更新数据
+🔹 第一步：更新数据
 首次使用请点击「📥 更新数据」按钮获取最新 IP 列表
 
-第二步：配置参数
-
+🔹 第二步：配置参数
 参数	选项	说明
 IP 协议	IPv4 / IPv6	选择要测试的 IP 类型
 连接验证	TLS / HTTP	加密连接方式
 期望带宽	10-1000 Mbps	达到此带宽即停止扫描
-第三步：开始扫描
+🔹 第三步：开始扫描
 点击「🚀 开始扫描」按钮，等待 8-15 秒
 
-第四步：查看结果
-
+🔹 第四步：查看结果
 点击 IP 地址自动复制到剪贴板
 
 历史记录自动保存最近 10 条
@@ -114,21 +112,22 @@ CF-IP-Optimizer/
 测速核心	原始 APP 算法
 并发模型	Goroutine + Channel
 ❓ 常见问题
-Q: 测速结果全部为 0？
-A: 请先点击「📥 更新数据」获取最新 IP 列表，然后重试。
+<details> <summary><b>Q: 测速结果全部为 0？</b></summary>
+请先点击「📥 更新数据」获取最新 IP 列表，然后重试。
 
-Q: 扫描时间太长？
-A: 可适当降低期望带宽值（如 30 Mbps），或增加并发数。
+</details><details> <summary><b>Q: 扫描时间太长？</b></summary>
+可适当降低期望带宽值（如 30 Mbps），或增加并发数。
 
-Q: 支持 IPv6 吗？
-A: 支持，在配置中选择 IPv6 即可。
+</details><details> <summary><b>Q: 支持 IPv6 吗？</b></summary>
+支持，在配置中选择 IPv6 即可。
 
-Q: 如何让局域网内其他人访问？
-A: 修改 main.go 中端口为 0.0.0.0:8080，重启程序即可。
+</details><details> <summary><b>Q: 如何让局域网内其他人访问？</b></summary>
+修改 main.go 中端口为 0.0.0.0:8080，重启程序即可。
 
-Q: 提示端口被占用？
-A: 关闭其他占用 8080 端口的程序，或修改 main.go 中的端口号。
+</details><details> <summary><b>Q: 提示端口被占用？</b></summary>
+关闭其他占用 8080 端口的程序，或修改 main.go 中的端口号。
 
+</details>
 📄 许可证
 MIT License © 2026
 
